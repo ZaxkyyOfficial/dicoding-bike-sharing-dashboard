@@ -157,7 +157,7 @@ with tab1:
 # ----------------- TAB 2: Musim & Cuaca (Pertanyaan Bisnis 1) -----------------
 with tab2:
     st.subheader("Pengaruh Musim & Kondisi Cuaca Terhadap Penyewaan Sepeda")
-    st.markdown("**Pertanyaan Bisnis 1:** *Bagaimana pengaruh kondisi cuaca dan musim terhadap jumlah rata-rata penyewaan sepeda harian? Musim apa yang mencatatkan performa tertinggi?*")
+    st.markdown("**Pertanyaan Bisnis 1:** *Bagaimana pengaruh kondisi cuaca dan musim terhadap rata-rata penyewaan sepeda harian selama periode 2011–2012, sebagai dasar bagi tim operasional dalam menjadwalkan kuota unit sepeda dan masa servis armada?*")
     
     col_season, col_weather = st.columns(2)
     
@@ -209,7 +209,7 @@ with tab2:
 # ----------------- TAB 3: Casual vs Registered (Pertanyaan Bisnis 2) -----------------
 with tab3:
     st.subheader("Pola Penyewaan Jam Sibuk: Pengguna Casual vs Registered")
-    st.markdown("**Pertanyaan Bisnis 2:** *Bagaimana pola perbandingan penyewaan antara pengguna casual dan registered berdasarkan jam dalam sehari (khususnya jam sibuk 07:00-09:00 dan 17:00-19:00) pada hari kerja?*")
+    st.markdown("**Pertanyaan Bisnis 2:** *Bagaimana perbandingan rata-rata penyewaan antara pengguna casual dan registered berdasarkan jam dalam sehari (khususnya jam sibuk komuter 07:00–09:00 dan 17:00–19:00) pada hari kerja selama periode 2011–2012, sebagai dasar arahan tim pemasaran untuk kampanye konversi pelanggan dan tim operasional untuk rebalancing stasiun?*")
     
     # Filter data hari kerja & weekend untuk perbandingan
     df_wd = filtered_df[filtered_df['workingday'] == 1].groupby('hr')[['casual', 'registered']].mean().reset_index()
